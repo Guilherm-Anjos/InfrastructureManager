@@ -19,11 +19,13 @@ h1{
 
 main{
     background-color: #f2f2f2;
+    display: flex;
 }
 
 nav{
     margin: 0;
     width: 200px;
+    min-height: calc(100vh - 60px);
 }
 
 nav a {
@@ -31,8 +33,10 @@ nav a {
     padding: 10px;
     text-decoration: none;
     color: #333333;
+    background-color: #e6e6e6;
 }
 
 nav a:hover {
     background-color: #dddddd;
 }
+
