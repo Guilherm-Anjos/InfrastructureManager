@@ -58,6 +58,7 @@ section p{
 .card {
     background-color: #ffffff;
     padding: 15px;
+    flex: 1;
 }
 
 .cards {
