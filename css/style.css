@@ -55,6 +55,11 @@ section p{
 
 }
 
+.dashboard-subtitle {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
 .card {
     background-color: #ffffff;
     padding: 15px;
@@ -74,7 +79,17 @@ section p{
 .cards {
     display: flex;
     gap: 15px;
+    margin-top: 15px;
 
+}
+
+.status{
+    margin-top: 20px;
+}
+.status-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .status-item {
@@ -82,6 +97,8 @@ section p{
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
+    min-height: 0px;
+    flex:1;
 }
 
 .status h3{
