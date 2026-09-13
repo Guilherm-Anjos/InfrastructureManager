@@ -40,3 +40,13 @@ nav a:hover {
     background-color: #dddddd;
 }
 
+section{
+    flex: 1;
+    padding: 20px;
+}
+
+section h2{
+    margin-top: 0;
+    padding: 20px;
+
+}
