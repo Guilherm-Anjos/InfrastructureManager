@@ -48,5 +48,14 @@ section{
 section h2{
     margin-top: 0;
     padding: 20px;
+}
 
+section p{
+    color: #555555;
+
+}
+
+.card {
+    background-color: #ffffff;
+    
 }
