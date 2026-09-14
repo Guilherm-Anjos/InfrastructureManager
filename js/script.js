@@ -40,3 +40,8 @@ function exibirMensagem(mensagem) {
 }
 
 exibirMensagem("Infrastructure Manager");
+
+
+function atualizarQuantidade(id, quantidade) {
+    const.elemento = documento.getElementById(id);
+}
