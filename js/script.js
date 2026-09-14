@@ -7,3 +7,10 @@ const elementoServidores = document.getElementById("quantidade-servidores");
 console.log(elementoServidores);
 
 elementoServidores.textContent = quantidadeServidores;
+
+const quantidadeSwitches = 8;
+const elementoSwitches = document.getElementById("quantidade-switches");
+console.log(elementoSwitches);
+
+elementoSwitches.textContent = quantidadeSwitches;
+
