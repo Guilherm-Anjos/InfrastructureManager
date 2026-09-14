@@ -35,8 +35,8 @@ elementoIncidentes.textContent = infraestrutura.incidentes;
 
 console.log(infraestrutura.servidores);
 
-function exibirMensagem() {
-    console.log("Infrastruture Manager");
+function exibirMensagem(mensagem) {
+    console.log(mensagem);
 }
 
-exibirMensagem();
+exibirMensagem("Infrastructure Manager");
