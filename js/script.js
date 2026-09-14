@@ -34,3 +34,9 @@ const elementoIncidentes = document.getElementById("quantidade-incidentes");
 elementoIncidentes.textContent = infraestrutura.incidentes;
 
 console.log(infraestrutura.servidores);
+
+function exibirMensagem() {
+    console.log("Infrastruture Manager");
+}
+
+exibirMensagem();
