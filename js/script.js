@@ -8,31 +8,6 @@ const infraestrutura = {
     incidentes: 8
 };
 
-/* Servidores */
-
-const elementoServidores = document.getElementById("quantidade-servidores");
-elementoServidores.textContent = infraestrutura.servidores;
-
-/* Switches */
-
-const elementoSwitches = document.getElementById("quantidade-switches");
-elementoSwitches.textContent = infraestrutura.switches;
-
-/* Ativos */
-
-const elementoAtivos = document.getElementById("quantidade-ativos");
-elementoAtivos.textContent = infraestrutura.ativos;
-
-/* Redes */
-
-const elementoRedes = document.getElementById("quantidade-redes");
-elementoRedes.textContent = infraestrutura.redes;
-
-/* Incidentes */
-
-const elementoIncidentes = document.getElementById("quantidade-incidentes");
-elementoIncidentes.textContent = infraestrutura.incidentes;
-
 console.log(infraestrutura.servidores);
 
 function exibirMensagem(mensagem) {
@@ -43,5 +18,17 @@ exibirMensagem("Infrastructure Manager");
 
 
 function atualizarQuantidade(id, quantidade) {
-    const.elemento = documento.getElementById(id);
+    const elemento = document.getElementById(id);
+    elemento.textContent = quantidade;
+    
 }
+
+atualizarQuantidade("quantidade-servidores", infraestrutura.servidores);
+
+atualizarQuantidade("quantidade-switches", infraestrutura.switches);
+
+atualizarQuantidade("quantidade-ativos", infraestrutura.ativos);
+
+atualizarQuantidade("quantidade-redes", infraestrutura.redes);
+
+atualizarQuantidade("quantidade-incidentes", infraestrutura.incidentes);
