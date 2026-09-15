@@ -32,3 +32,6 @@ atualizarQuantidade("quantidade-ativos", infraestrutura.ativos);
 atualizarQuantidade("quantidade-redes", infraestrutura.redes);
 
 atualizarQuantidade("quantidade-incidentes", infraestrutura.incidentes);
+
+const botaoAtualizar = document.getElementById("botao-atualizar");
+console.log(botaoAtualizar);
