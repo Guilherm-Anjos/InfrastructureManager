@@ -104,3 +104,19 @@ section p{
 .status h3{
     margin-top: 30px;
 }
+
+#botao-atualizar {
+    border: none;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#botao-atualizar:hover {
+    background-color: #333333;
+
+    
+}

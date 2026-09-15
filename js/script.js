@@ -23,17 +23,13 @@ function atualizarQuantidade(id, quantidade) {
     
 }
 
-atualizarQuantidade("quantidade-servidores", infraestrutura.servidores);
-
-atualizarQuantidade("quantidade-switches", infraestrutura.switches);
-
-atualizarQuantidade("quantidade-ativos", infraestrutura.ativos);
-
-atualizarQuantidade("quantidade-redes", infraestrutura.redes);
-
-atualizarQuantidade("quantidade-incidentes", infraestrutura.incidentes);
-
 const botaoAtualizar = document.getElementById("botao-atualizar");
+    console.log("Solicitando dados da infraestrutura...");
+    fetch("http://localhost:3000/api/infraestrutura")
 botaoAtualizar.addEventListener("click", function() {
-
+    atualizarQuantidade("quantidade-servidores", infraestrutura.servidores);
+    atualizarQuantidade("quantidade-switches", infraestrutura.switches);
+    atualizarQuantidade("quantidade-ativos", infraestrutura.ativos);
+    atualizarQuantidade("quantidade-redes", infraestrutura.redes);
+    atualizarQuantidade("quantidade-incidentes", infraestrutura.incidentes);
 });
