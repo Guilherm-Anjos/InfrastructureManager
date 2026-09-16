@@ -16,7 +16,14 @@ app.UseHttpsRedirection();
 
 app.MapGet("/api/infraestrutura", () =>
 {
-    return"Infrastructure Manager API";
+    return new
+    {
+        servidores = 12,
+        switches = 8,
+        ativos = 50,
+        redes = 4,
+        incidentes = 8
+    };
 });
 
 app.Run();
