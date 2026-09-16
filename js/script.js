@@ -26,6 +26,8 @@ function atualizarQuantidade(id, quantidade) {
 const botaoAtualizar = document.getElementById("botao-atualizar");
     console.log("Solicitando dados da infraestrutura...");
     fetch("http://localhost:5100/api/infraestrutura")
+        .then(resposta => resposta.json());
+
 botaoAtualizar.addEventListener("click", function() {
     atualizarQuantidade("quantidade-servidores", infraestrutura.servidores);
     atualizarQuantidade("quantidade-switches", infraestrutura.switches);
