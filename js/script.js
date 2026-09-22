@@ -41,10 +41,8 @@ function carregarInfraestrutura() {
             atualizarQuantidade("quantidade-incidentes", dados.incidentes);
         })
 }
+carregarInfraestrutura();
+
 botaoAtualizar.addEventListener("click", function() {
-    atualizarQuantidade("quantidade-servidores", infraestrutura.servidores);
-    atualizarQuantidade("quantidade-switches", infraestrutura.switches);
-    atualizarQuantidade("quantidade-ativos", infraestrutura.ativos);
-    atualizarQuantidade("quantidade-redes", infraestrutura.redes);
-    atualizarQuantidade("quantidade-incidentes", infraestrutura.incidentes);
+    carregarInfraestrutura();
 });
