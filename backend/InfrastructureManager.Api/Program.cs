@@ -27,7 +27,7 @@ app.MapGet("/api/infraestrutura", () =>
     return new
     {
         servidores = 20,
-        switches = 88,
+        switches = 12,
         ativos = 50,
         redes = 4,
         incidentes = 8

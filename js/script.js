@@ -40,6 +40,9 @@ function carregarInfraestrutura() {
             atualizarQuantidade("quantidade-redes", dados.redes);
             atualizarQuantidade("quantidade-incidentes", dados.incidentes);
         })
+        .catch(erro => {
+            console.error("Erro ao carregar dados da infraestrutura:", erro);
+        });
 }
 carregarInfraestrutura();
 
