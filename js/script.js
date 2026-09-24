@@ -1,14 +1,3 @@
-console.log("Script carregado com sucesso!");
-
-const infraestrutura = {
-    servidores: 12,
-    switches: 8,
-    ativos: 50,
-    redes: 4,
-    incidentes: 8
-};
-
-console.log(infraestrutura.servidores);
 
 function exibirMensagem(mensagem) {
     console.log(mensagem);
@@ -41,7 +30,7 @@ function carregarInfraestrutura() {
             atualizarQuantidade("quantidade-incidentes", dados.incidentes);
         })
         .catch(erro => {
-            console.error("Erro ao carregar dados da infraestrutura:", erro);
+            console.log("Erro ao carregar dados da infraestrutura:", erro);
         });
 }
 carregarInfraestrutura();
