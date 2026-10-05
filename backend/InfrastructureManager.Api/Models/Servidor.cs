@@ -8,4 +8,6 @@ public class Servidor
     public string Ip { get; set; } = string.Empty;
 
     public string SistemaOperacional { get; set; } = string.Empty;
+
+    public string Status { get; set; } = string.Empty;
 }
