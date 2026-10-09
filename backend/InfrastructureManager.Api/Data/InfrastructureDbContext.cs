@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using InfrastructureManager.Api.Models;
 
-namespace InfrastructureManager.Api.data;
+namespace InfrastructureManager.Api.Data;
 
 public class InfrastructureDbContext : DbContext
 {
