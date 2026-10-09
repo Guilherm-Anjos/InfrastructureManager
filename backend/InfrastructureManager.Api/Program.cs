@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using InfrastructureManager.Api.Data;
+using InfrastructureManager.Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,10 @@ app.MapGet("/api/infraestrutura", () =>
         redes = 4,
         incidentes = 8
     };
+});
+
+app.MapPost("/api/servidores", (Servidor servidor) =>
+{
 });
 
 app.Run();
