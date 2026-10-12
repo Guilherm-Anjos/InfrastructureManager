@@ -41,8 +41,9 @@ app.MapGet("/api/infraestrutura", () =>
     };
 });
 
-app.MapPost("/api/servidores", (Servidor servidor) =>
+app.MapPost("/api/servidores", (Servidor servidor, InfrastructureDbContext db) =>
 {
+    db.Servidores.Add(servidor);
 });
 
 app.Run();
