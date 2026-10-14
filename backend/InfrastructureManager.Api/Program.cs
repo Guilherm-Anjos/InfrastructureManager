@@ -50,8 +50,9 @@ app.MapPost("/api/servidores", async (Servidor servidor, InfrastructureDbContext
 
 });
 
-app.MapGet("/api/servidores", (InfrastructureDbContext db) =>
+app.MapGet("/api/servidores", async (InfrastructureDbContext db) =>
 {
+    return await db.Servidores.ToListAsync();
 });
 
 app.Run();
