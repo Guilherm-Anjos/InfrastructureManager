@@ -41,9 +41,17 @@ app.MapGet("/api/infraestrutura", () =>
     };
 });
 
-app.MapPost("/api/servidores", (Servidor servidor, InfrastructureDbContext db) =>
+app.MapPost("/api/servidores", async (Servidor servidor, InfrastructureDbContext db) =>
 {
     db.Servidores.Add(servidor);
+    await db.SaveChangesAsync();
+
+        return Results.Created($"/api/servidores/{servidor.Id}", servidor);
+
+});
+
+app.MapGet("/api/servidores", (InfrastructureDbContext db) =>
+{
 });
 
 app.Run();
