@@ -29,11 +29,11 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors("PermitirFrontend");
 
-app.MapGet("/api/infraestrutura", () =>
+app.MapGet("/api/infraestrutura", async (InfrastructureDbContext db) =>
 {
     return new
     {
-        servidores = 20,
+        servidores = await db.Servidores.CountAsync(),
         switches = 12,
         ativos = 50,
         redes = 4,
