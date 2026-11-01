@@ -10,7 +10,13 @@ function carregarServidores() {
             dados.forEach(servidor => {
                 console.log(servidor.nome);
             const linha = document.createElement("tr");
-            linha.innerHTML = `<td>${servidor.nome}</td>`;
+            linha.innerHTML = `
+                <td>${servidor.nome}</td>
+                <td>${servidor.ip}</td>
+                <td>${servidor.sistemaOperacional}</td>
+                <td>${servidor.status}</td>`;
+
+            tabela.appendChild(linha);
 
             });
         });
