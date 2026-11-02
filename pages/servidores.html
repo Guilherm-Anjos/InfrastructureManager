@@ -41,6 +41,15 @@
             <label for="sistema-operacional"> Sistema Operacional:</label>
             <input type="text" id="sistema-operacional" name="SistemaOperacional" placeholder="Ex: Windows Server 2022" required>
 
+
+            <label for="status-servidor"> Status do Servidor:</label>
+
+            <select id="status-servidor" name="status" required>
+                <option value="">Selecione o status</option>
+                <option value="Operacional">Operacional</option>
+                <option value="Manutenção">Manutenção</option>
+                <option value="Inativo">Inativo</option>
+            </select>
         </form>
        
     <table id="tabela-servidores">
