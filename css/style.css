@@ -120,3 +120,8 @@ section p{
 
     
 }
+
+#tabela-servidores {
+    width: 100%;
+    borer-collapse: collapse;
+}
