@@ -29,8 +29,14 @@
         <form id="formulaario-servidor">
             <h3> Cadastro de Servidor</h3>
 
-            <label for="nome-servidor"> N0ome do Servidor:</label>
+            <!-- Campo criado para acrescentar o nome do servidor -->
+            <label for="nome-servidor"> Nome do Servidor:</label>
             <input type="text" id="nome-servidor" name="nome" required>
+
+            <!-- Aqui serão cadastrados as informações de IP-->
+            <label for="ip-servidor"> Endereço IP:</label>
+            <input type="text" id="ip-servidor" name="ip" placeholder="192.168.1.1" required>
+
         </form>
        
     <table id="tabela-servidores">
