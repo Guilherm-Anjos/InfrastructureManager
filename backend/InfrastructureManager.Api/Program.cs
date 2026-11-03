@@ -57,5 +57,10 @@ app.MapGet("/api/servidores", async (InfrastructureDbContext db) =>
     return await db.Servidores.ToListAsync();
 });
 
+app.MapGet("/api/servidores/{id:int}", async (int id, InfrastructureDbContext db) =>
+{
+    return await db.Servidores.FindAsync(id);
+});
+
 app.Run();
 

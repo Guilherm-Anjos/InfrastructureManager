@@ -1,5 +1,4 @@
 body {
-    background-color: #101820;
     margin: 0;
 }
 
@@ -18,26 +17,31 @@ h1{
 }
 
 main{
-    background-color: #f2f2f2;
+    background-color: #101820;
     display: flex;
+    color: #E8F1F5;
 }
 
 nav{
     margin: 0;
     width: 200px;
     min-height: calc(100vh - 60px);
+    background-color: #172633;
 }
 
 nav a {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #333333;
-    background-color: #e6e6e6;
+    color: #E8F1F5;
+    background-color: transparent;
+    text-shadow: none;
 }
 
 nav a:hover {
-    background-color: #dddddd;
+    color: #00E5FF;
+    background-color: #203846;
+    text-shadow: 0 0 2px rgba(0, 229, 255, 0.35);
 }
 
 section{
@@ -172,3 +176,26 @@ section p{
         0 0 18px #909292,
         0 0 30px rgba(17, 17, 17, 0.4);
 }
+
+#gerenciamento-servidores > p {
+    color: #94A3B8;
+}
+
+#formulario-servidor input,
+#formulario-servidor select {
+    background-color: #172633;
+    color: #E8F1F5;
+    border: 1px solid #40586A;
+    border-radius: 6px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card h3 {
+    color: #101820;
+}
+
+.status-item h4 {
+    color: #101820;
+}
+
