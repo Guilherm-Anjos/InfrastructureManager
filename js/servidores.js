@@ -56,6 +56,10 @@ formulario.addEventListener("submit", function(event) {
     "Content-Type": "application/json"
 },
     body: JSON.stringify(novoServidor)
+})
+.then(resposta => {
+    console.log("Status HTTP:", resposta.status);
+    console.log("Cadastro realizado?", resposta.ok);
 });
 
 });
