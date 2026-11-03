@@ -59,7 +59,11 @@ formulario.addEventListener("submit", function(event) {
 })
 .then(resposta => {
     console.log("Status HTTP:", resposta.status);
-    console.log("Cadastro realizado?", resposta.ok);
+    console.log("Cadastro realizado!", resposta.ok);
+
+    if (resposta.ok) {
+    carregarServidores();
+}
 });
 
 });
