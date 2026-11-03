@@ -51,7 +51,10 @@ formulario.addEventListener("submit", function(event) {
     console.log("Dados preparados para cadastro:", novoServidor);
 
     fetch("http://localhost:5100/api/servidores", {
-    method: "POST"
+    method: "POST",
+    headers: {
+    "Content-Type": "application/json"
+}
 });
 
 });
