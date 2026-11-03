@@ -1,6 +1,6 @@
-body{
+body {
+    background-color: #101820;
     margin: 0;
-    
 }
 
 header{
@@ -131,4 +131,44 @@ section p{
     padding: 12px 16px;
     text-align: left;
     border-bottom: 1px solid #dddddd;
+}
+
+#formulario-servidor {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+#formulario-servidor h3 {
+    grid-column: 1 / -1;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#botao-cadastrar-servidor {
+    width: fit-content;
+    padding: 12px 24px;
+    cursor: pointer;
+
+    background-color: #101820;
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+}
+
+#botao-cadastrar-servidor:hover {
+    background-color: #00e5ff;
+    color: #101820;
+
+    box-shadow:
+        0 0 8px #828788,
+        0 0 18px #909292,
+        0 0 30px rgba(17, 17, 17, 0.4);
 }

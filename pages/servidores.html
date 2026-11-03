@@ -29,19 +29,26 @@
         <form id="formulario-servidor">
             <h3> Cadastro de Servidor</h3>
 
+            <div class="campo-formulario">
             <!-- Campo criado para acrescentar o nome do servidor -->
             <label for="nome-servidor"> Nome do Servidor:</label>
             <input type="text" id="nome-servidor" name="nome" required>
+            </div>
 
+            <div class="campo-formulario">
             <!-- Aqui serão cadastrados as informações de IP-->
             <label for="ip-servidor"> Endereço IP:</label>
             <input type="text" id="ip-servidor" name="ip" placeholder="192.168.1.1" required>
+            </div>
 
+            <div class="campo-formulario">
             <!-- Aqui será cadastrado o sistema operacional do servidor -->
             <label for="sistema-operacional"> Sistema Operacional:</label>
             <input type="text" id="sistema-operacional" name="SistemaOperacional" placeholder="Ex: Windows Server 2022" required>
+            </div>
 
-
+            <div class="campo-formulario">
+            <!-- Aqui será cadastrado o status do servidor -->
             <label for="status-servidor"> Status do Servidor:</label>
 
             <select id="status-servidor" name="status" required>
@@ -50,7 +57,7 @@
                 <option value="Manutenção">Manutenção</option>
                 <option value="Inativo">Inativo</option>
             </select>
-
+            </div>
             <button type="submit" id="botao-cadastrar-servidor">Cadastrar Servidor</button>  
         </form>
        

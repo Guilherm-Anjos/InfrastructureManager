@@ -63,6 +63,7 @@ formulario.addEventListener("submit", function(event) {
 
     if (resposta.ok) {
     carregarServidores();
+    formulario.reset();
 }
 });
 
