@@ -40,5 +40,19 @@ formulario.addEventListener("submit", function(event) {
 
     const status = document.getElementById("status-servidor").value;
     console.log("Status do Servidor:", status);
+
+    const novoServidor = {
+    nome: nome,
+    ip: ip,
+    sistemaOperacional: sistemaOperacional,
+    status: status
+};
+
+    console.log("Dados preparados para cadastro:", novoServidor);
+
+    fetch("http://localhost:5100/api/servidores", {
+    method: "POST"
+});
+
 });
 
