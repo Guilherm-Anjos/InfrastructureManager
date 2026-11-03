@@ -23,3 +23,10 @@ function carregarServidores() {
 }
 
 carregarServidores();
+const formulario = document.getElementById("formulario-servidor");
+
+formulario.addEventListener("submit", function(event) {
+    event.preventDefault();
+    console.log("Formulário enviado!");
+});
+
