@@ -28,5 +28,17 @@ const formulario = document.getElementById("formulario-servidor");
 formulario.addEventListener("submit", function(event) {
     event.preventDefault();
     console.log("Formulário enviado!");
+
+    const nome = document.getElementById("nome-servidor").value;
+    console.log("Nome do servidor:", nome);
+
+    const ip = document.getElementById("ip-servidor").value;
+    console.log("IP do servidor:", ip);
+
+    const sistemaOperacional = document.getElementById("sistema-operacional").value;
+    console.log("Sistema Operacional:", sistemaOperacional);
+
+    const status = document.getElementById("status-servidor").value;
+    console.log("Status do Servidor:", status);
 });
 
