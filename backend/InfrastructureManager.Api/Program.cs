@@ -59,7 +59,14 @@ app.MapGet("/api/servidores", async (InfrastructureDbContext db) =>
 
 app.MapGet("/api/servidores/{id:int}", async (int id, InfrastructureDbContext db) =>
 {
-    return await db.Servidores.FindAsync(id);
+    var servidor = await db.Servidores.FindAsync(id);
+
+    if (servidor == null)
+    {
+        return Results.NotFound("Servidor não encontrado.");
+    }
+
+    return Results.Ok(servidor);
 });
 
 app.Run();
