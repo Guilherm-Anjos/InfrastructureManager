@@ -92,6 +92,16 @@ app.MapPut("/api/servidores/{id:int}", async (int id, Servidor dadosAtualizados,
 
 app.MapDelete("/api/servidores/{id:int}", async (int id, InfrastructureDbContext db) =>
 {
+    var servidor = await db.Servidores.FindAsync(id);
+
+    if (servidor == null)
+{
+    return Results.NotFound("Servidor não encontrado.");
+}
+
+    db.Servidores.Remove(servidor);
+    await db.SaveChangesAsync();
+    return Results.NoContent();
 });
 
 app.Run();
