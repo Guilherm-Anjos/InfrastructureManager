@@ -69,5 +69,26 @@ app.MapGet("/api/servidores/{id:int}", async (int id, InfrastructureDbContext db
     return Results.Ok(servidor);
 });
 
+app.MapPut("/api/servidores/{id:int}", async (int id, Servidor dadosAtualizados, InfrastructureDbContext db) =>
+{
+    var servidor = await db.Servidores.FindAsync(id);
+     
+     if (servidor == null)
+     
+    {
+        return Results.NotFound("Servidor não encontrado.");
+    }
+
+        servidor.Nome = dadosAtualizados.Nome;
+        servidor.Ip = dadosAtualizados.Ip;
+        servidor.SistemaOperacional = dadosAtualizados.SistemaOperacional;
+        servidor.Status = dadosAtualizados.Status;
+
+
+        await db.SaveChangesAsync();
+        return Results.Ok(servidor);
+        
+});
+
 app.Run();
 
