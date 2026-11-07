@@ -90,5 +90,9 @@ app.MapPut("/api/servidores/{id:int}", async (int id, Servidor dadosAtualizados,
         
 });
 
+app.MapDelete("/api/servidores/{id:int}", async (int id, InfrastructureDbContext db) =>
+{
+});
+
 app.Run();
 
