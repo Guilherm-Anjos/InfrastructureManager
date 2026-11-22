@@ -10,14 +10,25 @@ function carregarServidores() {
             dados.forEach(servidor => {
                 console.log(servidor.nome);
             const linha = document.createElement("tr");
-            linha.innerHTML = `
-                <td>${servidor.nome}</td>
-                <td>${servidor.ip}</td>
-                <td>${servidor.sistemaOperacional}</td>
-                <td>${servidor.status}</td>`;
+        linha.innerHTML = `
+            <td>${servidor.nome}</td>
+            <td>${servidor.ip}</td>
+            <td>${servidor.sistemaOperacional}</td>
+            <td>${servidor.status}</td>
+                            <td>
+            <button class="botao-editar" data-id="${servidor.id}">Editar</button>
+            </td>`;
 
             tabela.appendChild(linha);
+                const botaoEditar = linha.querySelector(".botao-editar");
 
+            botaoEditar.addEventListener("click", function() {
+            console.log("Editar servidor de ID:", servidor.id);
+            document.getElementById("nome-servidor").value = servidor.nome;
+            document.getElementById("ip-servidor").value = servidor.ip;
+            document.getElementById("sistema-operacional").value = servidor.sistemaOperacional;
+            document.getElementById("status-servidor").value = servidor.status; 
+                });
             });
         });
 }
